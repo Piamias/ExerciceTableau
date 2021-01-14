@@ -10,9 +10,9 @@ void ordertabascending(int* tab, int tabSize)
 	firstValue = 0;
 	nextValue = 1;
 	
-	while ( firstValue < tabSize-1 && nextValue < tabSize )
+	while (firstValue < tabSize-1 && nextValue < tabSize)
 	{
-		if ( tab[firstValue] > tab[nextValue])
+		if (tab[firstValue] > tab[nextValue])
 		{			
 			ordertab(&tab[firstValue], &tab[nextValue]);
 			firstValue = 0;
@@ -28,7 +28,7 @@ void ordertabascending(int* tab, int tabSize)
 
 int  main()
 {
-	int tab[8] = {9,1,1,1,2,3,8,3};
+	int tab[8] = {9, 1, 1, 1, 2, 3, 8, 3};
 	
 	ordertabascending(tab/*pointeur vers tab[0]*/,8);
 	displaytab(tab,8);
