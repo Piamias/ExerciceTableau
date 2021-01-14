@@ -12,3 +12,5 @@ void displaytabexo2(int tab[], int tabSize);
 void displaytabexo3(int tab[], int tabSize);
 
 void displaytab(int tab[], int tabSize);
+
+void orderArray(int array[], int firstValue, int nextValue);
