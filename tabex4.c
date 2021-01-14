@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "tab.h"
 
-void ordertabascending(int tab[] , int tabSize)
+void ordertabascending(int* tab, int tabSize)
 {
 	int firstValue;
 	int nextValue;
@@ -12,9 +12,11 @@ void ordertabascending(int tab[] , int tabSize)
 	
 	while ( firstValue < tabSize-1 && nextValue < tabSize )
 	{
-		if ( tab[firstValue] > tab[nextValue] )
-		{	
-			ordertab(tab, firstValue, nextValue);		
+		if ( tab[firstValue] > tab[nextValue])
+		{			
+			ordertab(&tab[firstValue], &tab[nextValue]);
+			firstValue = 0;
+			nextValue = 1;		
 		}
 		else
 		{
@@ -26,8 +28,8 @@ void ordertabascending(int tab[] , int tabSize)
 
 int  main()
 {
-	int tab[8] = {1,2,7,3,4,5,6,7};
+	int tab[8] = {9,1,1,1,2,3,8,3};
 	
-	ordertabascending(tab,8);
+	ordertabascending(tab/*pointeur vers tab[0]*/,8);
 	displaytab(tab,8);
 }
