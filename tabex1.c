@@ -1,8 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "tab.h"
 
-void displaytabexo1(int tab[], int tabSize);
+void displaytabexo1(int tab[], int tabSize)
+{
+	int i;
+
+	i = 0;
+	while ( i < tabSize )		
+	{
+		if ( tab[i] < 5 )	
+		{
+			printf("%d\n",tab[i]);
+			i++;
+		}
+		else
+		{
+			i++;
+		}
+	}
+}
 
 int  main()
 {
