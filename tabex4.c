@@ -2,9 +2,11 @@
 #include <stdlib.h>
 #include "tab.h"
 
+//void orderArray(int firstValue, int nextValue);
+
 void ordertabascending(int tab[] , int tabSize)
 {
-	int save;
+//	int save;
 	int firstValue;
 	int nextValue;
 
@@ -15,11 +17,12 @@ void ordertabascending(int tab[] , int tabSize)
 	{
 		if ( tab[firstValue] > tab[nextValue] )
 		{	
-			save = tab[firstValue];
+			orderArray(tab, firstValue, nextValue);
+			/*save = tab[firstValue];
 			tab[firstValue] = tab[nextValue];
 			tab[nextValue] = save;
 			firstValue = 0;
-			nextValue = 1;
+			nextValue = 1;*/
 		}
 		else
 		{
@@ -28,8 +31,6 @@ void ordertabascending(int tab[] , int tabSize)
 		}
 	}
 }
-
-void displaytab(int tab[], int tabSize);
 
 int  main()
 {
