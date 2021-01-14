@@ -1,14 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void ordertab(int tab[], int firstValue, int nextValue)
+void ordertab(int* tab1, int* tab2)
 {
 	int save;
-	
-	save = tab[firstValue];
-	tab[firstValue] = tab[nextValue];
-	tab[nextValue] = save;
-	firstValue = 0;
-	nextValue = 1;
-	
+
+	save = *tab1;
+	*tab1 = *tab2;
+	*tab2  = save;
 }
