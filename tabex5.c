@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "tab.h"
 
-void displaytab(int tab[], int tabSize)
-{
+void displaytab(int tab[], int tabSize);
+/*{
 	int i;
 
 	i = 0;
@@ -12,7 +13,7 @@ void displaytab(int tab[], int tabSize)
 		i++;
 	}
 }
-
+*/
 void ordertabdescending(int tab[] , int tabSize)
 {
 	int save;
