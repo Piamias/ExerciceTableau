@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void orderArray(int array[], int firstValue, int nextValue)
+void ordertab(int tab[], int firstValue, int nextValue)
 {
 	int save;
-
-	save = array[firstValue];
-	array[firstValue] = array[nextValue];
-	array[nextValue] = save;
+	
+	save = tab[firstValue];
+	tab[firstValue] = tab[nextValue];
+	tab[nextValue] = save;
+	printf("%d et %d",firstValue,nextValue);
 	firstValue = 0;
-	nextValue = 0;		
+	nextValue = 1;
+	
 }
