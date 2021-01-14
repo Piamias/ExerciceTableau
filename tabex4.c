@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "tab.h"
 
 void ordertabascending(int tab[] , int tabSize)
 {
@@ -28,17 +29,7 @@ void ordertabascending(int tab[] , int tabSize)
 	}
 }
 
-void displaytab(int tab[], int tabSize)
-{
-	int i;
-
-	i = 0;
-	while ( i < tabSize )		
-	{
-		printf("tab [%d] = %d\n",i ,tab[i]);
-		i++;
-	}
-}
+void displaytab(int tab[], int tabSize);
 
 int  main()
 {
